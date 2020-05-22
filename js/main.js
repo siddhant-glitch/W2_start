@@ -11,6 +11,10 @@
   //one to one cinnection ->one variable name means one element
       svgBadge = document.querySelector("svg")
   //  Var theBadge = document.querySelector('.badge');
+let characterButtons=document.querySelectorAll("button"),
+    mainHeading = document.querySelector("#mainHeading"),
+    mainImage = document.querySelector(".hero");
+
 
 setTimeout(function(){
   mainHeading.textContent = "javascript really isnt that bad";
@@ -21,6 +25,12 @@ setTimeout(function(){
   //functions go in the middle
   function logID() {
     console.log("Graphic you clicked on : ", this.id);
+  }
+
+  function switchImage() {
+    console.log("clicked on a button");
+    let currentImage = this.dataset.character + ".jpg";
+    mainImage.src = "images/" + currentImage;
   }
 
   //event handling
