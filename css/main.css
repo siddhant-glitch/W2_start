@@ -3,3 +3,7 @@ main div { width: 43%; display: inline-block; }
 img, svg { width: 100%; }
 
 #redText:hover { fill: yellow; }
+
+.selected{
+  color: green;
+}

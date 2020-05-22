@@ -5,9 +5,18 @@
   console.log('fired!');
 
   //selct elements here
-  let theBadge = document.querySelector('.badge'),
+  //
+  //querySelectorAll is a one to many selection -> find every element that matches the selector
+  let theBadges = document.querySelectorAll('.badge'),
+  //one to one cinnection ->one variable name means one element
       svgBadge = document.querySelector("svg")
   //  Var theBadge = document.querySelector('.badge');
+
+setTimeout(function(){
+  mainHeading.textContent = "javascript really isnt that bad";
+  mainHeading.classList.add("selected");
+}, 3000);
+
 
   //functions go in the middle
   function logID() {
@@ -15,8 +24,12 @@
   }
 
   //event handling
-  theBadge.addEventListener("click", logID);
+  //theBadge.addEventListener("click", logID);
+  theBadges.forEach(badge=> badge.addEventListener("click", logID))
   svgBadge.addEventListener("click", logID);
                                     //function
+  window.addEventListener("load", function(){
+    console.log("everything is loaded");
+  })
   //debugger; //pause your code execution
 })();
